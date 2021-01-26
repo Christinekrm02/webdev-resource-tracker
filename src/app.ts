@@ -1,13 +1,9 @@
 class Resource {
-  title: string;
-  details: string;
-  rating: number;
   //Initialize values in constructor to pass values for each properties to instance of class
-  constructor(title: string, details: string, rating: number) {
-    this.title = title;
-    this.details = details;
-    this.rating = rating;
-  }
+  constructor(
+      readonly title: string, 
+      private details: string, 
+      public rating: number) {}
   format() {
     return `The article ${this.title} explains the ${this.details}. I give it a rating of ${this.rating}`;
   }
