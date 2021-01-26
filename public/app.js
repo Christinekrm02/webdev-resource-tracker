@@ -1,27 +1,16 @@
-"use strict";
-var Resource = /** @class */ (function () {
-    //Initialize values in constructor to pass values for each properties to instance of class
-    function Resource(title, details, rating) {
-        this.title = title;
-        this.details = details;
-        this.rating = rating;
-    }
-    Resource.prototype.format = function () {
-        return "The article " + this.title + " explains the " + this.details + ". I give it a rating of " + this.rating;
-    };
-    return Resource;
-}());
-var resourceOne = new Resource("More on React Redux", "how to connect to redux store and more", 9);
-var resourceTwo = new Resource("CSS Tips and Tricks", "fun animations with CSS", 7);
+import { Resource } from "./models/resources.js";
+const resourceOne = new Resource("More on React Redux", "how to connect to redux store and more", 9);
+const resourceTwo = new Resource("CSS Tips and Tricks", "fun animations with CSS", 7);
 console.log(resourceOne, resourceTwo);
+//Add to DOM
 //to select input fields
-var type = document.querySelector("#type");
-var topic = document.querySelector("#topic-title");
-var detailss = document.querySelector("#detailss");
-var dateExplored = document.querySelector("#date-explored");
+const type = document.querySelector("#type");
+const topic = document.querySelector("#topic-title");
+const detailss = document.querySelector("#detailss");
+const dateExplored = document.querySelector("#date-explored");
 //to select form
-var form = document.querySelector(".new-item-form");
-form.addEventListener("submit", function (e) {
+const form = document.querySelector(".new-item-form");
+form.addEventListener("submit", (e) => {
     e.preventDefault();
     console.log(type.value, topic.value, detailss.value, dateExplored.value);
 });
