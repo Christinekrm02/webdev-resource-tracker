@@ -1,4 +1,4 @@
-export class Article {
+export class ArticleResource {
     //Initialize values in constructor to pass values for each properties to instance of class
     constructor(title, details, rating) {
         this.title = title;

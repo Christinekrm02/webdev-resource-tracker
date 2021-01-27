@@ -1,4 +1,4 @@
-export class Article {
+export class VideoResource {
     //Initialize values in constructor to pass values for each properties to instance of class
     constructor(title, details, rating) {
         this.title = title;
@@ -6,6 +6,6 @@ export class Article {
         this.rating = rating;
     }
     format() {
-        return `The article ${this.title} explains the ${this.details}. I give it a rating of ${this.rating}`;
+        return `The video ${this.title} explains the ${this.details}. I give it a rating of ${this.rating}`;
     }
 }
